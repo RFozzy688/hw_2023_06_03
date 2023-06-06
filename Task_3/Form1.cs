@@ -11,15 +11,22 @@ namespace Task_3
         private void ShowTime(object sender, EventArgs e)
         {
             timeSpan = dateTime - DateTime.Now;
-            labelTime.Text = "До окончания предмета WinForms осталось: " + Convert.ToInt32(timeSpan.TotalSeconds) + " секунд";
+            labelTime.Text = "До начала экземена по WinForms осталось: " + Convert.ToInt32(timeSpan.TotalSeconds) + " секунд";
+
+            if (Convert.ToInt32(timeSpan.TotalSeconds) == 0)
+            {
+                timer.Stop();
+                MessageBox.Show("Экзамен!!!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         public Form1()
         {
             InitializeComponent();
 
-            dateTime = new DateTime(2023, 8, 19, 12, 0, 0);
+            dateTime = new DateTime(2023, 6, 6, 15, 18, 0);
+            timeSpan = dateTime - DateTime.Now;
 
-            labelTime.Text = "До окончания предмета WinForms осталось: ";
+            labelTime.Text = "До начала экземена по WinForms осталось: ";
             timer.Tick += new EventHandler(ShowTime);
             timer.Interval = 1000;
             timer.Start();
