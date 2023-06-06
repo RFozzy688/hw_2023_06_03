@@ -23,7 +23,7 @@ namespace Task_3
         {
             InitializeComponent();
 
-            dateTime = new DateTime(2023, 6, 6, 15, 18, 0);
+            dateTime = new DateTime(2023, 8, 19, 12, 0, 0);
             timeSpan = dateTime - DateTime.Now;
 
             labelTime.Text = "До начала экземена по WinForms осталось: ";
