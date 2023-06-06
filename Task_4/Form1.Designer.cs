@@ -37,8 +37,9 @@
             button1.Name = "button1";
             button1.Size = new Size(192, 128);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Старт";
             button1.UseVisualStyleBackColor = true;
+            button1.MouseDown += button1_MouseDown;
             // 
             // Form1
             // 
