@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            labelTime = new Label();
+            SuspendLayout();
+            // 
+            // labelTime
+            // 
+            labelTime.AutoSize = true;
+            labelTime.Font = new Font("Verdana", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTime.Location = new Point(12, 23);
+            labelTime.Name = "labelTime";
+            labelTime.Size = new Size(77, 23);
+            labelTime.TabIndex = 1;
+            labelTime.Text = "label2";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(789, 81);
+            Controls.Add(labelTime);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Label labelTime;
     }
 }
